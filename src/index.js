@@ -17,6 +17,13 @@ const server = async () => {
     await server.start();
   
     server.applyMiddleware({app});
+
+    try{
+        await mongoose.connect("mongodb+srv://joshn:sailingNirvana87$@dabblelabproject.h5zws.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true })
+    } catch(err) {
+       console.log(err);
+    }
+    
    
 
     app.get('/', (req, res)=> {
