@@ -10,7 +10,8 @@ const server = async () => {
     const app = express();
     const server = new ApolloServer ({
         typeDefs,
-        resolvers
+        resolvers,
+        uploads: false,
     })
 
 

@@ -1,14 +1,14 @@
 import { Location } from "./models/location";
 
+
 export const resolvers = {
     Query: {
-        helloWorld: () => "hello world",
         dataSet: () => Location.find()
     }, 
 
     Mutation: {
-        createLocaton: async(_, { country }) => {
-            const place = new Location({country});
+        createLoc: async(_, { country, year, area, totalPop }) => {
+            const place = new Location({country, year, area, totalPop});
             await place.save();
             return place;
         }
