@@ -11,7 +11,6 @@ const server = async () => {
     const server = new ApolloServer ({
         typeDefs,
         resolvers,
-        uploads: false,
     })
 
 

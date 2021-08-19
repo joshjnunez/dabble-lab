@@ -1,5 +1,5 @@
 
 import mongoose from "mongoose";
-import { schemaData } from "../../schema";
 
-export const Location = mongoose.model("Location", { schemaData })
+
+export const Location = mongoose.model("Location", { country: String, year: String, area: Number, totalPop: Number })
